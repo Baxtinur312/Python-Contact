@@ -1,6 +1,6 @@
 from sys import exit
 from printer import print_menu
-from contact import add_contact, show_all_contact
+from contact import add_contact, show_all_contact, search_contact, delete_contact, update_contact
 
 
 def main():
@@ -18,15 +18,13 @@ def main():
         elif choice == '2':
             show_all_contact(contacts)
         elif choice == '3':
-            pass
+            search_contact(contacts)
         elif choice == '4':
-            pass
+            delete_contact(contacts)
         elif choice == '5':
-            pass
+            update_contact(contacts)
         elif choice == '6':
-            pass
-        else:
+            print("Chiqmoqda...")
             exit(0)
-
-if __name__ == "__main__":
-    main()
+        else:
+            print("Noto‘g‘ri tanlov. Qayta urinib ko‘ring.")
